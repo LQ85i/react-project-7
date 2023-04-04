@@ -1,10 +1,40 @@
-.content {
+#main-wrapper {
   text-align: center;
-  background-color: #1b1630;
+  background-color: #ffffff;
   min-height: 100vh;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 50px 1fr 25px;
+}
+
+#header {
+  
+  grid-row: 1/2;
+  position: fixed;
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid black;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  color: white;
+}
+
+#header .left {
+  display: flex;
+  align-items: center;
+  min-height: 50px;
+  gap: 50px;
+  margin-left: 30px;
+}
+
+
+#content {
+  grid-row: 2/3;
+  background-color: #ffffff;
+  border: 1px solid black;
+}
+
+#footer {
+ grid-row: 3/4;
+ border: 1px solid black;
 }
