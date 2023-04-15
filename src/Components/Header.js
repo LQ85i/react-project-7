@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import shopping_cart from "../Images/shopping_cart.svg"
+import shopping_cart from "../Images/icon_shopping_cart.svg"
 
 const Header = (props) => {
     const { navigate, cart, showCart, setShowCart } = props;
