@@ -4,12 +4,12 @@ import HomePage from "./HomePage";
 import StorePage from "./StorePage";
 
 const Content = (props) => {
-    const {cart, items} = props;
+    const {cart, itemData} = props;
     return (
         <div id="content">
             <Routes>
                 <Route path='/' element={<HomePage />}></Route>
-                <Route path='/store' element={<StorePage cart={cart} items={items}/>} ></Route>
+                <Route path='/store' element={<StorePage cart={cart} itemData={itemData}/>} ></Route>
             </Routes>
         </div>
     )

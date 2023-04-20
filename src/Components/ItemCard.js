@@ -4,7 +4,7 @@ const ItemCard = (props) => {
     const {cart, item} = props;
 
     const handleAddToCart = () => {
-        cart.addItem(item); 
+        cart.addItem(item.id); 
     }
 
     return <div className="item-card">

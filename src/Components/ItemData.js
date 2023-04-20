@@ -1,7 +1,7 @@
 import placeholder_img from "../Images/icon_placeholder.svg";
 import uniqid from 'uniqid';
 
-const items = [{
+const itemData = [{
     img: placeholder_img,
     title: "item1",
     price: "1.00 €",
@@ -26,4 +26,4 @@ const items = [{
     id: uniqid()
 }]
 
-export default items;
+export default itemData;

@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from "react";
 import shopping_cart from "../Images/icon_shopping_cart.svg"
 
 const Header = (props) => {
     const { navigate, cart, showCart, setShowCart } = props;
 
-   
     const handleClick = (e) => {
         if (e.currentTarget.className === "home") {
             navigate("/");
@@ -26,7 +24,7 @@ const Header = (props) => {
                 <button className="store" onClick={handleClick}>Store</button>
             </div>
             <div className="center"></div>
-            <div className="right">
+            <div id="toggle-cart" className="right">
                 <div className="cart-count">{cart.items.length}</div>
                 <img className="icon-cart" src={shopping_cart} alt="" onClick={handleClick}/>
             </div>
