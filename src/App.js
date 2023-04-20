@@ -6,7 +6,7 @@ import Footer from './Components/Footer';
 import { useNavigate } from 'react-router-dom';
 import Cart from './Components/Cart';
 import SidebarCart from './Components/SidebarCart';
-import items from './Components/ItemData';
+import itemData from './Components/ItemData';
 
 
 function App() {
@@ -15,13 +15,11 @@ function App() {
   const [showCart, setShowCart] = useState("hidden");
   const navigate = useNavigate();
 
-  
-
   return (
     <div id='main-wrapper'>
-      <Header navigate={navigate} cart={cart} showCart={showCart} setShowCart={setShowCart}/>
-      <SidebarCart cart={cart} showCart={showCart}/>
-      <Content cart={cart} items={items}/>
+      <Header navigate={navigate} cart={cart} showCart={showCart} setShowCart={setShowCart} />
+      <SidebarCart cart={cart} showCart={showCart} setShowCart={setShowCart}/>
+      <Content cart={cart} itemData={itemData} />
       <Footer />
     </div>
   );
