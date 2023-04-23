@@ -1,6 +1,4 @@
 import React from "react";
-import icon_add from "../Images/icon_add.svg"
-import icon_remove from "../Images/icon_remove.svg"
 import OutsideAlerter from "./ClickedOutsideCart";
 
 const SidebarCart = (props) => {
@@ -10,18 +8,22 @@ const SidebarCart = (props) => {
 
     const handleClick = (e) => {
         e.preventDefault();
-        if (e.target.className === "icon-remove") {
-            const itemID = e.target.parentNode.parentNode.getAttribute("data-item-id");
-            cart.removeItem(itemID);
-        } else if (e.target.className === "icon-add") {
-            const itemID = e.target.parentNode.parentNode.getAttribute("data-item-id");
-            cart.addItem(itemID);
-        } else if (e.target.className === "clear-cart") {
+        if (e.target.className === "clear-cart") {
             cart.clearItems();
         }
     }
 
-
+    const handleCountChange = (e) => {
+        const count = e.target.value;
+        if(isNaN(count) || count === ""){
+            return;
+        }
+        if(count<=99){
+            const itemID = e.target.parentNode.getAttribute("data-item-id");
+            cart.setItemCount(itemID, count);
+        }
+        
+    }
 
     const renderCartItems = () => {
         if (cart.items.length === 0) {
@@ -53,11 +55,7 @@ const SidebarCart = (props) => {
                     <img src={groupedItems[i][0].img} className="image" alt="" />
                     <div className="title">{groupedItems[i][0].title}</div>
                     <div className="price">{groupedItems[i][0].price}</div>
-                    <div className="container-count">
-                        <img className="icon-remove" src={icon_remove} onClick={handleClick} alt="" />
-                        <div className="count">{groupedItems[i].length}</div>
-                        <img className="icon-add" src={icon_add} onClick={handleClick} alt="" />
-                    </div>
+                    <input type="number" className="edit-count" value={groupedItems[i].length} onChange={handleCountChange} max={99} maxLength={2}/>
 
                 </div>
             )

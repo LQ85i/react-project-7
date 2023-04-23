@@ -123,19 +123,24 @@
   height: 20px;
 }
 
-.cart-item .container-count {
+
+.cart-item .edit-count {
+  grid-row: 2/3;
   margin-top: 10px;
   margin-left: 90px;
-  grid-row: 2/3;
+  min-width: 60px;
+  font-size: 16px;
+  border-radius: 10px;
   display: flex;
   justify-content: space-between;
+  text-align: center;
+  align-self: center;
+  border: 1px solid black;
 }
 
-.cart-item .count {
-  min-width: 60px;
-  align-self: center;
-  border-radius: 10px;
-  border: 1px solid black;
+.cart-item .edit-count::placeholder {
+  color: black;
+  opacity: 1;
 }
 
 .cart-item .icon-add {
