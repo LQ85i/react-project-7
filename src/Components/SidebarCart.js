@@ -1,5 +1,6 @@
 import React from "react";
 import OutsideAlerter from "./ClickedOutsideCart";
+import icon_x from "../Images/icon_x.svg"
 
 const SidebarCart = (props) => {
     const { cart, showCart, setShowCart } = props;
@@ -10,19 +11,22 @@ const SidebarCart = (props) => {
         e.preventDefault();
         if (e.target.className === "clear-cart") {
             cart.clearItems();
+        } else if(e.currentTarget.className === "remove-item") {
+            const itemID = e.currentTarget.parentNode.getAttribute("data-item-id");
+            cart.setItemCount(itemID, 0);
         }
     }
 
     const handleCountChange = (e) => {
         const count = e.target.value;
-        if(isNaN(count) || count === ""){
+        if (isNaN(count) || count === "") {
             return;
         }
-        if(count<=99){
+        if (count <= 99) {
             const itemID = e.target.parentNode.getAttribute("data-item-id");
             cart.setItemCount(itemID, count);
         }
-        
+
     }
 
     const renderCartItems = () => {
@@ -50,13 +54,18 @@ const SidebarCart = (props) => {
 
         const cartItems = []
         for (let i = 0; i < groupedItems.length; i++) {
+            const item = groupedItems[i][0];
             cartItems.push(
-                <div className="cart-item" data-item-id={groupedItems[i][0].id} key={i}>
-                    <img src={groupedItems[i][0].img} className="image" alt="" />
-                    <div className="title">{groupedItems[i][0].title}</div>
-                    <div className="price">{groupedItems[i][0].price}</div>
-                    <input type="number" className="edit-count" value={groupedItems[i].length} onChange={handleCountChange} max={99} maxLength={2}/>
-
+                <div className="cart-item" data-item-id={item.id} key={i}>
+                    <button className="remove-item" onClick={handleClick}>
+                        <img src={icon_x} alt="" className="icon-x"/>
+                    </button>
+                    <img src={item.img} className="image" alt="" />
+                    <div className="title">{item.title}</div>
+                    <input type="number" className="edit-count" value={groupedItems[i].length} onChange={handleCountChange} max={99} />
+                    <div className="price">{item.price.toFixed(2) + " €"}</div>
+                    <div className="item-total-title">Total: </div>
+                    <div className="item-total">{cart.getItemTotal(item.id).toFixed(2) + " €"}</div>
                 </div>
             )
         }
@@ -66,6 +75,10 @@ const SidebarCart = (props) => {
                 <button className="clear-cart" onClick={handleClick}>Clear cart</button>
             </div>
             <div className="cart-items">{cartItems}</div>
+            <div className="cart-total-container">
+                <div className="cart-total-title">Cart Total: </div>
+                <div className="cart-total">{cart.getCartTotal().toFixed(2) + " €"}</div>
+            </div>
         </>
 
     }

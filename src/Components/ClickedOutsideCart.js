@@ -7,7 +7,13 @@ function useOutsideAlerter(ref, showCart, setShowCart) {
         function handleClickOutside(event) {
             if (ref.current && !ref.current.contains(event.target)) {
                 if (event.target.parentNode !== null) {
-                    if (showCart === "" && event.target.parentNode.id !== "toggle-cart"&& event.target.parentNode.className !== "container-count") {
+                    if (
+                        showCart === "" 
+                        && event.target.parentNode.id !== "toggle-cart"
+                        && event.target.parentNode.className !== "container-count"
+                        && event.target.className !== "add-to-cart"
+                        && event.target.className !== "remove-item"
+                        && event.target.parentNode.className !== "remove-item") {
                         setShowCart("hidden");
                     };
                 }

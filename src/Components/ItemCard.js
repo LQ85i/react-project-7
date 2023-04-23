@@ -10,7 +10,7 @@ const ItemCard = (props) => {
     return <div className="item-card">
         <img className="image" src={item.img} alt="" />
         <div className="title">{item.title}</div>
-        <div className="price">{item.price}</div>
+        <div className="price">{item.price.toFixed(2) + " €"}</div>
         <button className="add-to-cart" onClick={handleAddToCart} >Add to cart</button>
     </div>
 }
