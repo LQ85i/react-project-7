@@ -7,7 +7,7 @@ function Cart() {
     const maxItemCount = 99;
     
     const addItem = (itemID) => {
-        if(itemCount(itemID)<maxItemCount){
+        if(getItemCount(itemID)<maxItemCount){
             const newItems = [...items];
             const newItem = itemData.find(obj => obj.id === itemID);
             newItems.push(newItem);
@@ -24,7 +24,7 @@ function Cart() {
         setItems(newItems);
     }
 
-    const itemCount = (itemID) => {
+    const getItemCount = (itemID) => {
         let count = 0;
         for (let i = 0; i < items.length; i++) {
             if(items[i].id === itemID){
@@ -32,6 +32,24 @@ function Cart() {
             }
         }
         return count;
+    }
+
+    const getItemTotal = (itemID) => {
+        let sum = 0;
+        for (let i = 0; i < items.length; i++) {
+            if(items[i].id === itemID){
+                sum += items[i].price;
+            }
+        }
+        return sum;
+    }
+
+    const getCartTotal = () => {
+        let sum = 0;
+        for (let i = 0; i < items.length; i++) {
+            sum += items[i].price;
+        }
+        return sum;
     }
 
     const clearItems = () => {
@@ -57,7 +75,7 @@ function Cart() {
         setItems(newItems);
     }
 
-    return {items, addItem, removeItem, clearItems, setItemCount};
+    return {items, addItem, removeItem, clearItems, setItemCount, getItemTotal, getCartTotal};
 }
 
 export default Cart
