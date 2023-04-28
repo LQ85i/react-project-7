@@ -8,7 +8,7 @@ const ItemCard = (props) => {
     const handleAddToCart = () => {
         cart.setItemCount(item.id, parseInt(count, 10));
     }
-
+    
     return <div className="item-card">
         <img className="image" src={item.img} alt="" />
         <div className="title">{item.title}</div>
