@@ -12,8 +12,8 @@ function useOutsideAlerter(ref, showCart, setShowCart) {
                         && event.target.parentNode.id !== "toggle-cart"
                         && event.target.parentNode.className !== "container-count"
                         && event.target.className !== "add-to-cart"
-                        && event.target.className !== "remove-item"
-                        && event.target.parentNode.className !== "remove-item") {
+                        && !event.target.className.includes("delete-item")
+                        && !event.target.parentNode.className.includes("delete-item")) {
                         setShowCart("hidden");
                     };
                 }
