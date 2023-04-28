@@ -9,13 +9,13 @@ const ItemInputField = (props) => {
         if (e.currentTarget.className === "icon-remove" && count > 0) {
             const newCount = parseInt(count, 10) - 1;
             setCount(newCount);
-            if(e.currentTarget.parentNode.parentNode.className==="cart-item"){
+            if (e.currentTarget.parentNode.parentNode.className === "cart-item") {
                 cart.setItemCount(itemID, newCount);
             }
-        } else if (e.currentTarget.className === "icon-add" && count < 99) {
+        } else if (e.currentTarget.className === "icon-add" && count < cart.getMaxCount()) {
             const newCount = parseInt(count, 10) + 1;
             setCount(newCount);
-            if(e.currentTarget.parentNode.parentNode.className==="cart-item"){
+            if (e.currentTarget.parentNode.parentNode.className === "cart-item") {
                 cart.setItemCount(itemID, newCount);
             }
         }
@@ -28,22 +28,22 @@ const ItemInputField = (props) => {
         if (isNaN(value)) {
             return;
         }
-        if (value.length > 2) {
-            value = value.slice(0, 2);
-        } else if (value.startsWith("0") && value.length === 2) {
-            value = value.slice(1, 2);
+        while (value.startsWith("0") && value.length > 1) {
+            value = value.slice(1, value.length);
+        }
+        if (value.length > cart.getMaxCount().toString().length) {
+            value = cart.getMaxCount();
         } else if (value.includes(".")) {
             value = 0;
         } else if (value === "") {
             value = 0;
-        } else if (newCount >= 0 && newCount <= 99) {
-            value = newCount;
-        } else if (newCount > 99) {
-            value = 99;
-        } else if (newCount < 0 ){
+        } else if (newCount >= 0 && newCount <= cart.getMaxCount()) {
+            // do nothing
+        } else if (newCount > cart.getMaxCount()) {
+            value = cart.getMaxCount();
+        } else if (newCount < 0) {
             value = 0;
         }
-        newCount = parseInt(value, 10);
         if (parentClass === "cart-item") {
             setCount(value);
         } else if (parentClass === "item-card") {
@@ -54,16 +54,18 @@ const ItemInputField = (props) => {
     const handleBlur = (e) => {
         const parentClass = e.target.parentNode.parentNode.className;
         if (parentClass === "cart-item") {
-            cart.setItemCount(itemID, count);
+            const newCount = parseInt(count, 10);
+            cart.setItemCount(itemID, newCount);
         }
 
     }
 
     const handleKeyDown = (e) => {
-        if(e.key === "Enter"){
-            cart.setItemCount(itemID, count);
+        if (e.key === "Enter") {
+            const newCount = parseInt(count, 10);
+            cart.setItemCount(itemID, newCount);
         }
-        if(e.key === '.' && e.preventDefault()){
+        if (e.key === '.' && e.preventDefault()) {
             return true;
         } else return false;
     }
@@ -76,7 +78,6 @@ const ItemInputField = (props) => {
             value={count}
             onChange={handleChange}
             onPaste={(e) => e.preventDefault()}
-            max={99}
             onKeyDown={handleKeyDown}
             onBlur={handleBlur}
         />

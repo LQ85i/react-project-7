@@ -34,6 +34,10 @@ function Cart() {
         return sum;
     }
 
+    const getMaxCount = () => {
+        return maxItemCount;
+    }
+
     const getItemCount = (itemID) => {
         const index = items.indexOf(items.find(x => x.id === itemID));
         const count = items[index].count;
@@ -76,7 +80,7 @@ function Cart() {
         }
     }
 
-    return { items, addItem, removeItem, getAllItemsCount, getItemCount, clearItems, setItemCount, getItemTotal, getCartTotal };
+    return { items, addItem, removeItem, getAllItemsCount, getMaxCount, getItemCount, clearItems, setItemCount, getItemTotal, getCartTotal };
 }
 
 export default Cart
