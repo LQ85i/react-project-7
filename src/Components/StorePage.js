@@ -1,18 +1,18 @@
 import React from "react";
 import ItemCard from "./ItemCard";
+import itemData from "./ItemData";
 
 const StorePage = (props) => {
-    const { cart, itemData } = props;
+    const { cart } = props;
     
 
     
 
     function renderItemCards() {
         let itemCards = [];
-        
-        for (let i = 0; i < itemData.length; i++) {
+        for (let i = 0; i < itemData.getData().length; i++) {
             itemCards.push(
-                <ItemCard cart={cart} item={itemData[i]} key={i}/>
+                <ItemCard cart={cart} item={itemData.getData()[i]} key={i}/>
             )
         }
         return itemCards;

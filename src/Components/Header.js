@@ -25,7 +25,7 @@ const Header = (props) => {
             </div>
             <div className="center"></div>
             <div id="toggle-cart" className="right">
-                <div className="cart-count">{cart.items.length}</div>
+                <div className="cart-count">{cart.getAllItemsCount()}</div>
                 <img className="icon-cart" src={shopping_cart} alt="" onClick={handleClick}/>
             </div>
         </div>
