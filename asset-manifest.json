@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/react-project-7/static/css/main.64f3ea8b.css",
+    "main.js": "/react-project-7/static/js/main.0dfd96bd.js",
+    "static/media/icon_shopping_cart.svg": "/react-project-7/static/media/icon_shopping_cart.ea0823e018d26ac6f618cd841e7e9ec8.svg",
+    "index.html": "/react-project-7/index.html",
+    "static/media/icon_placeholder.svg": "/react-project-7/static/media/icon_placeholder.c6eb7057c6862cee0a07250c35ae119d.svg",
+    "static/media/icon_x.svg": "/react-project-7/static/media/icon_x.c76ad28c33323dfe86ec1e4bcf9c5b6c.svg",
+    "static/media/icon_add.svg": "/react-project-7/static/media/icon_add.c8b39a336d92d4c5c69f8493a4ff6af5.svg",
+    "static/media/icon_remove.svg": "/react-project-7/static/media/icon_remove.bf60699d5d18b452d77986227b0ffa5f.svg",
+    "main.64f3ea8b.css.map": "/react-project-7/static/css/main.64f3ea8b.css.map",
+    "main.0dfd96bd.js.map": "/react-project-7/static/js/main.0dfd96bd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.64f3ea8b.css",
+    "static/js/main.0dfd96bd.js"
+  ]
+}
