@@ -4,7 +4,7 @@ import itemData from '../Components/ItemData';
 
 function Cart() {
     const [items, setItems] = useState([]) // format: [{id,count}]
-    const maxItemCount = 99;
+    const maxItemCount = 5;
 
     const addItem = (itemID) => {
         const newItems = [...items];

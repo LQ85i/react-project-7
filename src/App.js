@@ -17,7 +17,7 @@ function App() {
     <div id='main-wrapper'>
       <Header navigate={navigate} cart={cart} showCart={showCart} setShowCart={setShowCart} />
       <SidebarCart cart={cart} showCart={showCart} setShowCart={setShowCart}/>
-      <Content cart={cart}/>
+      <Content navigate={navigate} cart={cart}/>
       <Footer />
     </div>
   );
