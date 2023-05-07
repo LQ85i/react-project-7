@@ -16,34 +16,76 @@ input[type=number] {
   min-height: 100vh;
   height: 100%;
   display: grid;
-  grid-template-rows: 50px 1fr 25px;
+  grid-template-rows: 90px 1fr 25px;
 }
 
 #header {
   grid-row: 1/2;
   position: fixed;
   width: 100%;
-  max-height: 50px;
-  background-color: #ffffff;
+  height: 90px;
+  background-color: #503025;
   border: 1px solid black;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 120px 1fr;
   align-items: center;
+  color: white;
+  z-index: 2;
+  box-shadow: 0 0 8px black;
 }
 
 #header .left {
+  grid-column: 1/2;
   display: flex;
   align-items: center;
   min-height: 50px;
-  gap: 50px;
   margin-left: 30px;
+  gap: 15px;
+}
+
+#header .left button {
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#header .left button:active {
+  text-shadow: 1px 0px 5px rgba(255, 255, 255, 0.521);
+}
+#header .left button:hover {
+  cursor: pointer;
+  text-shadow: 1px 0px 5px rgba(255, 255, 255, 0.521);
+}
+
+#header .center {
+  grid-column: 2/3;
+  display: flex;
+  align-self: center;
+  justify-content: center;
 }
 
 #header .right {
+  grid-column: 3/4;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 10px;
-  margin-right: 10px;
+  margin-right: 30px;
+}
+
+#header .center .burger-logo {
+  cursor: pointer;
+  height: 50px;
+}
+
+#header .center .logo-text {
+  cursor: pointer;
+  font-size: 15px;
+  margin-right: 19px;
+  font-style: italic;
+  font-weight: bold;
 }
 
 
@@ -55,7 +97,7 @@ input[type=number] {
 
 #footer {
  grid-row: 3/4;
- border: 1px solid black;
+ background-color: #503025;
 }
 
 #container-cards {
@@ -283,7 +325,7 @@ input[type=number] {
 #header .icon-cart {
   width: 40px;
   height: 40px;
-  padding: 2px;
+  padding: 2px;filter: invert(100%) sepia(98%) saturate(2%) hue-rotate(250deg) brightness(105%) contrast(101%);
 }
 
 #header .icon-cart:hover {
@@ -295,3 +337,140 @@ input[type=number] {
   outline: 1px solid rgb(107, 107, 107);
 }
 
+#header .cart-count {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.container-home {
+  display: grid;
+  grid-template-rows: 730px 700px 400px;
+}
+
+.container-home .presentation {
+  position: relative;
+  display: flex;
+}
+
+.container-home .presentation .text-background {
+  background-image: linear-gradient(0deg,
+  rgba(0, 0, 0, 0.562),
+  rgba(0, 0, 0, 0.562),
+  rgba(0, 0, 0, 0.562),
+  rgba(0, 0, 0, 0.562),
+  rgba(0, 0, 0, 0),
+  rgba(0, 0, 0, 0));
+  height: 300px;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  align-self: flex-end;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.container-home .presentation .text-background .button-store {
+  width: 150px;
+  height: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  align-self: center;
+  background-color: rgb(212, 42, 0);
+  color: white;
+  border-radius: 50px;
+  margin-bottom: 20px;
+  border-style: none;
+}
+
+.container-home .presentation .text {
+  width: 300px;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  align-self: center;
+  margin-bottom: 20px;
+  text-align: center;
+  font-style: italic;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+
+.container-home .presentation .image {
+  position: absolute;
+  top: -180px;
+  width: 100%;
+  height: calc(100% + 180px);
+  background-size: cover;
+  background-position: top right;
+}
+
+.container-home .info-cards {
+  background-color: rgb(255, 237, 203);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  box-shadow: 0 0 10px black;
+  z-index: 1;
+} 
+
+.container-home .info-cards .card {
+  width: 250px;
+  height: 300px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-home .info-cards .card .image {
+ width: 150px;
+ height: 150px;
+ margin-top: 20px;
+ align-self: center;
+}
+
+.container-home .info-cards .card .text {
+  margin-top: 20px;
+}
+
+.container-home .opening-hours {
+  background-color: #faf3eb;
+}
+
+.container-home .opening-hours .title {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.container-home .opening-hours .hours-table {
+  display: grid;
+  grid-template-rows: repeat(4, 30px);
+  justify-content: center;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.container-home .opening-hours .hours-table .row {
+  width: 200px;
+  display: grid;
+  grid-template-columns: 100px 100px;
+  font-size: 18px;
+}
+
+.container-home .opening-hours .hours-table .days {
+  grid-column: 1/2;
+  text-align: left;
+}
+.container-home .opening-hours .hours-table .hours {
+  grid-column: 2/3;
+}
+
+.container-home .opening-hours .address {
+  margin-top: 50px;
+}
+
+.container-home .opening-hours .phone-number {
+  margin-top: 20px;
+}
