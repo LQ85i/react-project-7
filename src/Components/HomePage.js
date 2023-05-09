@@ -20,7 +20,7 @@ const HomePage = (props) => {
         <div className="container-home">
             <div className="presentation">
                 <div className="text-background">
-                    <div className="text">Filler text Filler text<br /><br />Filler text Filler text</div>
+                    <div className="text">Filler text<br /><br />Filler text Filler text</div>
                     <button className="button-store" onClick={handleClick}>Order Now!</button>
                 </div>
                 <div className="image" style={{ backgroundImage: 'url(' + cycleImages() + ')' }} />
@@ -32,11 +32,11 @@ const HomePage = (props) => {
                 </div>
                 <div className="card">
                     <img className="image" src={icon_placeholder} alt="" />
-                    <div className="text">feature information</div>
+                    <div className="text">feature information feature information </div>
                 </div>
                 <div className="card">
                     <img className="image" src={icon_placeholder} alt="" />
-                    <div className="text">feature information</div>
+                    <div className="text">feature information feature information feature information </div>
                 </div>
             </div>
             <div className="opening-hours">

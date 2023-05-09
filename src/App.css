@@ -30,7 +30,7 @@ input[type=number] {
   grid-template-columns: 1fr 120px 1fr;
   align-items: center;
   color: white;
-  z-index: 2;
+  z-index: 3;
   box-shadow: 0 0 8px black;
 }
 
@@ -153,11 +153,13 @@ input[type=number] {
 .item-card .icon-add {
   width: 30px;
   height: 30px;
+  cursor: pointer;
 }
 
 .item-card .icon-remove {
   width: 30px;
   height: 30px;
+  cursor: pointer;
 }
 
 .item-card input {
@@ -176,7 +178,9 @@ input[type=number] {
   border-left: 1px solid black;
   width: 260px;
   height: calc(100% - 50px);
-  margin-top: 51px;
+  margin-top: 91px;
+  padding-top: 20px;
+  z-index: 2;
 }
 #sidebar-cart.hidden {
   visibility: hidden;
@@ -213,11 +217,13 @@ input[type=number] {
   width: 25px;
   height: 25px;
   margin-left: 7px;
+  cursor: pointer;
 }
 
 .cart-item .icon-remove {
   width: 25px;
   height: 25px;
+  cursor: pointer;
 }
 
 .cart-item .image {
@@ -283,6 +289,7 @@ input[type=number] {
 .cart-item .icon-x {
   width: 20px;
   height: 20px;
+  cursor: pointer;
 }
 
 .cart-item .delete-item:hover {
@@ -326,6 +333,7 @@ input[type=number] {
   width: 40px;
   height: 40px;
   padding: 2px;filter: invert(100%) sepia(98%) saturate(2%) hue-rotate(250deg) brightness(105%) contrast(101%);
+  cursor: pointer;
 }
 
 #header .icon-cart:hover {
@@ -380,6 +388,11 @@ input[type=number] {
   border-radius: 50px;
   margin-bottom: 20px;
   border-style: none;
+  cursor: pointer;
+}
+
+.container-home .presentation .text-background .button-store:hover {
+  text-shadow: 1px 0px 5px rgba(255, 255, 255, 0.521);
 }
 
 .container-home .presentation .text {
@@ -432,6 +445,8 @@ input[type=number] {
 
 .container-home .info-cards .card .text {
   margin-top: 20px;
+  width: 200px;
+  align-self: center;
 }
 
 .container-home .opening-hours {
@@ -473,4 +488,132 @@ input[type=number] {
 
 .container-home .opening-hours .phone-number {
   margin-top: 20px;
+}
+
+#store-view {
+  display: flex;
+}
+
+#sidebar-search {
+  display: grid;
+  transition: 0.15s;
+  border-right: 1px solid black;
+  width: 200px;
+  min-width: 200px;
+  margin-left: 0;
+  min-height: 500px;
+  z-index: 2;
+  grid-template-rows: 30px 30px 100px;
+  padding: 10px;
+  opacity: 1;
+  transition: 0.15s;
+  visibility: visible;
+}
+
+#sidebar-search.hidden {
+  visibility: hidden;
+  transition: 0.15s;
+  margin-left: -200px;
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+
+#sidebar-search .main-title {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  text-align: left;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+#store-view .expand-search {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  font-weight: bold;
+  visibility: visible;
+  height: fit-content;
+  width: fit-content;
+  opacity: 1;
+  transition: 0.20s;
+  transition-delay: 0.15s;
+  filter: invert(47%) sepia(0%) saturate(18%) hue-rotate(192deg) brightness(91%) contrast(85%);}
+
+#store-view .expand-search.hidden {
+  visibility: hidden;
+  transition: 0s;
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+
+#store-view .hide-search {
+  visibility: visible;
+  transition: 0.20s;
+  transition-delay: 0.15s;
+  height: fit-content;
+  width: fit-content;
+  opacity: 1;
+}
+
+#store-view .hide-search.hidden {
+  visibility: hidden;
+  transition: 0s;
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+
+#store-view .hide-search img {
+  filter: invert(47%) sepia(0%) saturate(18%) hue-rotate(192deg) brightness(91%) contrast(85%);
+}
+
+#store-view .hide-search img:hover {
+  filter: drop-shadow(0 0 0.5px black) invert(47%) sepia(0%) saturate(18%) hue-rotate(192deg) brightness(91%) contrast(85%);
+}
+
+#store-view .expand-search:hover {
+  filter: drop-shadow(0 0 0.5px black) invert(47%) sepia(0%) saturate(18%) hue-rotate(192deg) brightness(91%) contrast(85%);
+
+}
+
+#sidebar-search .title {
+  text-align: left;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+#sidebar-search .filter-category {
+  margin-top: 20px;
+}
+
+#sidebar-search .filter {
+  display: flex;
+  margin-top: 10px;
+}
+
+#sidebar-search .search-bar {
+  margin-top: 30px;
+  display: flex;
+  align-self: center;
+}
+#sidebar-search .search-bar .input {
+  width: 160px;
+}
+
+#sidebar-search .search-bar .icon_search {
+  width: 30px;
+  height: 30px;
+  margin-left: 5px;
+  filter: invert(47%) sepia(0%) saturate(18%) hue-rotate(192deg) brightness(91%) contrast(85%);
+
+}
+
+#sidebar-search .search-bar .icon_search:hover {
+  outline: 1px solid gray;
+  border-radius: 10px;
+  filter: drop-shadow(0 0 0.5px black) invert(47%) sepia(0%) saturate(18%) hue-rotate(192deg) brightness(91%) contrast(85%);
+
 }
