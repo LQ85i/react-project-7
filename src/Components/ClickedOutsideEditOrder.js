@@ -7,7 +7,7 @@ function useOutsideAlerter(ref, showEditOrder, setShowEditOrder) {
         function handleClickOutside(event) {
             if (ref.current && !ref.current.contains(event.target)) {
                 if (event.target.parentNode !== null) {
-                    if(event.target.className !== "edit-order"){
+                    if(event.target.className !== "button-edit-order"){
                         setShowEditOrder(false);
                     }
                 }
