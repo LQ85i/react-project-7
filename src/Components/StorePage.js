@@ -4,11 +4,15 @@ import itemData from "./ItemData";
 import icon_arrows_right from "../Images/icon_arrows_right.svg"
 import icon_arrows_left from "../Images/icon_arrows_left.svg"
 import icon_search from "../Images/icon_search.svg"
+import EditOrder from "./EditOrder";
+import OutsideAlerterEditOrder from "./ClickedOutsideEditOrder";
 
 const StorePage = (props) => {
     const { cart } = props;
 
     const [showSearch, setShowSearch] = useState(false)
+    const [showEditOrder, setShowEditOrder] = useState(false);
+    const [editOrderItemID, setEditOrderItemID] = useState(null);
 
     const [sidebarSearchClassName, setSidebarSearchClassName] = useState("hidden");
     const [hideSearchClassName, setHideSearchClassName] = useState("hide-search hidden");
@@ -39,10 +43,18 @@ const StorePage = (props) => {
         let itemCards = [];
         for (let i = 0; i < itemData.getData().length; i++) {
             itemCards.push(
-                <ItemCard cart={cart} item={itemData.getData()[i]} key={i} />
+                <ItemCard item={itemData.getData()[i]} showEditOrder={showEditOrder} setShowEditOrder={setShowEditOrder} setEditOrderItemID={setEditOrderItemID} key={i} />
             )
         }
         return itemCards;
+    }
+
+    const renderEditOrder = () => {
+        if (showEditOrder) {
+            return (<EditOrder cart={cart} editOrderItemID={editOrderItemID} setShowEditOrder={setShowEditOrder} />)
+        } else {
+            return;
+        }
     }
 
     return <div id="store-view">
@@ -81,10 +93,13 @@ const StorePage = (props) => {
             <img className="icon-arrows-right" src={icon_arrows_right} alt="" />
             <div className="text">Search & Filters</div>
         </div>
-        <div id="container-cards">
+        <div id="container-cards" className={showEditOrder ? 'blurred' : ''}>
             {renderItemCards()}
         </div>
-    </div>
+        <OutsideAlerterEditOrder showEditOrder={showEditOrder} setShowEditOrder={setShowEditOrder}>
+            {renderEditOrder()}
+        </OutsideAlerterEditOrder>
+    </div >
 
 }
 

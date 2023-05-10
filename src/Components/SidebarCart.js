@@ -1,7 +1,7 @@
 import React from "react";
-import OutsideAlerter from "./ClickedOutsideCart";
 import SidebarCartItem from "./SidebarCartItem";
 import itemData from "./ItemData";
+import OutsideAlerterCart from "./ClickedOutsideCart";
 
 const SidebarCart = (props) => {
     const { cart, showCart, setShowCart } = props;
@@ -60,11 +60,11 @@ const SidebarCart = (props) => {
         </>
 
     }
-    return <OutsideAlerter showCart={showCart} setShowCart={setShowCart}>
+    return <OutsideAlerterCart showCart={showCart} setShowCart={setShowCart}>
         <div id="sidebar-cart" className={showCart}>
             {renderCartItems()}
         </div>
-    </OutsideAlerter>
+    </OutsideAlerterCart>
 
 
 }
