@@ -14,7 +14,7 @@ const ItemCard = (props) => {
         <img className="image" src={item.img} alt="" />
         <div className="title">{item.title}</div>
         <div className="price">{item.price.toFixed(2) + " €"}</div>
-        <button className="edit-order" onClick={handleEditOrder} >I want this!</button>
+        <button className="button-edit-order" onClick={handleEditOrder} >I want this!</button>
     </div>
 }
 

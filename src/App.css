@@ -109,6 +109,7 @@ input[type=number] {
   grid-template-rows: repeat(auto-fill, 290px);
   gap: 15px;
   
+  
 }
 
 #container-cards.blurred {
@@ -125,6 +126,7 @@ input[type=number] {
   align-items: center;
   padding: 10px;
   border-radius: 10px;
+  background-color: rgb(255, 255, 255);
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.795);
 }
 
@@ -135,39 +137,25 @@ input[type=number] {
   align-items: center;
   justify-content: center;
   background-color: rgb(223, 223, 223);
-  border: 1px solid black;
   border-radius: 10px;
 }
 .item-card .title {
   width: 230px;
   font-size: 17px;
+  margin-top: 10px;
 }
 .item-card .price {
   font-size: 14px;
 }
-.item-card .add-to-cart {
-  width: 100px;
+
+.item-card .button-edit-order {
+  margin-top: 10px;
+  background-color: rgb(255, 200, 99);
+  border-radius: 5px;
+  padding: 3px 10px;
+  font-weight: bold;
 }
 
-
-.item-card .icon-add {
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-}
-
-.item-card .icon-remove {
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-}
-
-.item-card input {
-  height: 20px;
-  display: flex;
-  text-align: center;
-  align-self: center;
-}
 
 #sidebar-cart {
   position: fixed;
@@ -175,12 +163,14 @@ input[type=number] {
   transition: 0.15s;
   margin-left: calc(100% - 260px);
   background-color: rgb(255, 255, 255);
-  border-left: 1px solid black;
+  box-shadow: 0 0 10px black;
   width: 260px;
-  height: calc(100% - 50px);
+  top: 0px;
+  bottom: 0px;
   margin-top: 91px;
   padding-top: 20px;
   z-index: 2;
+  overflow: scroll;
 }
 #sidebar-cart.hidden {
   visibility: hidden;
@@ -303,23 +293,26 @@ input[type=number] {
 .cart-total-container {
   display: grid;
   justify-content: center;
+  align-self: center;
   grid-template-columns: 130px 100px;
   border-top: 1px solid #000;
-  margin-top: 20px;
+  margin-top: 10px;
   padding-top: 10px;
+  height: 70px;
+  
 }
 
 .cart-total-title {
   font-size: 17px;
   font-weight: bold;
-  align-self: center;
   text-align: left;
+  margin-top: 20px;
 }
 
 .cart-total {
   grid-column: 2/3;
   text-align: right;
-  align-self: center;
+  margin-top: 20px;
 }
 
 #cart-top-buttons {
@@ -447,6 +440,8 @@ input[type=number] {
   margin-top: 20px;
   width: 200px;
   align-self: center;
+  font-size: 18px;
+  font-style: italic;
 }
 
 .container-home .opening-hours {
@@ -491,14 +486,15 @@ input[type=number] {
 }
 
 #store-view {
-  display: flex;
+  display: flex;  
+  background-color: #faf3eb;
+
 }
 
 
 #sidebar-search {
   display: grid;
   transition: 0.15s;
-  border-right: 1px solid black;
   width: 200px;
   min-width: 200px;
   margin-left: 0;
@@ -509,6 +505,8 @@ input[type=number] {
   opacity: 1;
   transition: 0.15s;
   visibility: visible;
+  background-color: white;
+  box-shadow: 0 0 10px black;
 }
 
 #sidebar-search.hidden {
@@ -681,7 +679,6 @@ input[type=number] {
   margin-bottom: 10px;
   width: 100px;
   align-self: center;
-  
 }
 
 #edit-order .close {
@@ -696,10 +693,5 @@ input[type=number] {
 }
 
 #edit-order .close:hover {
-  outline: 1px solid #000;
-  
-}
-
-#edit-order .close:active {
-  outline: 1px solid #000000c0;
+  filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.719)) invert(47%) sepia(0%) saturate(18%) hue-rotate(192deg) brightness(91%) contrast(85%);
 }
