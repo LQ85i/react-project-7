@@ -30,10 +30,7 @@ const ItemInputField = (props) => {
         }
         while (value.startsWith("0") && value.length > 1) {
             value = value.slice(1, value.length);
-        }
-        if (value.length > cart.getMaxCount().toString().length) {
-            value = cart.getMaxCount();
-        } else if (value.includes(".")) {
+        } if (value.includes(".")) {
             value = 0;
         } else if (value === "") {
             value = 0;
@@ -47,6 +44,8 @@ const ItemInputField = (props) => {
         if (parentClass === "cart-item") {
             setCount(value);
         } else if (parentClass === "item-card") {
+            setCount(value);
+        } else if (e.target.parentNode.parentNode.id === "edit-order"){
             setCount(value);
         }
     }

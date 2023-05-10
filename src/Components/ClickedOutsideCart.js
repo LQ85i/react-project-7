@@ -27,7 +27,7 @@ function useOutsideAlerter(ref, showCart, setShowCart) {
     }, [ref, showCart, setShowCart]);
 }
 
-export default function OutsideAlerter(props) {
+export default function OutsideAlerterCart(props) {
     const { showCart, setShowCart } = props;
     const wrapperRef = useRef(null);
     useOutsideAlerter(wrapperRef, showCart, setShowCart);
