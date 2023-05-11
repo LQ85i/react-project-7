@@ -52,11 +52,12 @@ const SidebarCart = (props) => {
                 <button className="to-checkout">Checkout</button>
                 <button className="clear-cart" onClick={handleClick}>Clear cart</button>
             </div>
-            <div className="cart-items">{cartItems}</div>
             <div className="cart-total-container">
                 <div className="cart-total-title">Cart Total: </div>
                 <div className="cart-total">{cart.getCartTotal().toFixed(2) + " €"}</div>
             </div>
+            <div className="cart-items">{cartItems}</div>
+            
         </>
 
     }

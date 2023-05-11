@@ -17,7 +17,7 @@ const HomePage = (props) => {
     }
 
     return (
-        <div className="container-home">
+        <div id="container-home">
             <div className="presentation">
                 <div className="text-background">
                     <div className="text">Filler text<br /><br />Filler text Filler text</div>
@@ -26,18 +26,25 @@ const HomePage = (props) => {
                 <div className="image" style={{ backgroundImage: 'url(' + cycleImages() + ')' }} />
             </div>
             <div className="info-cards">
-                <div className="card">
-                    <img className="image" src={icon_placeholder} alt="" />
-                    <div className="text">feature information</div>
-                </div>
-                <div className="card">
-                    <img className="image" src={icon_placeholder} alt="" />
-                    <div className="text">feature information feature information </div>
-                </div>
-                <div className="card">
-                    <img className="image" src={icon_placeholder} alt="" />
-                    <div className="text">feature information feature information feature information </div>
-                </div>
+                <section>
+                    <div className="card">
+                        <img className="image" src={icon_placeholder} alt="" />
+                        <div className="text">feature information</div>
+                    </div>
+                </section>
+                <section>
+                    <div className="card">
+                        <img className="image" src={icon_placeholder} alt="" />
+                        <div className="text">feature information feature information </div>
+                    </div>
+                </section>
+                <section>
+                    <div className="card">
+                        <img className="image" src={icon_placeholder} alt="" />
+                        <div className="text">feature information feature information feature information </div>
+                    </div>
+                </section>
+
             </div>
             <div className="opening-hours">
                 <div className="title">OPEN:</div>
@@ -60,7 +67,7 @@ const HomePage = (props) => {
                     </div>
                 </div>
                 <div className="address">Address 123, 00000 City</div>
-                <div className="phone-number">+012 0123 01230<br/>+012 0123 01231</div>
+                <div className="phone-number">+012 0123 01230<br />+012 0123 01231</div>
             </div>
         </div>)
 }

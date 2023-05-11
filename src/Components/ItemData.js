@@ -22,7 +22,7 @@ const itemData = (function() {
     },
     {
         img: kebab_stock,
-        title: "Kebab",
+        title: "Kebab With A Long Name",
         price: 13.00,
         id: uniqid()
     },

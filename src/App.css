@@ -10,6 +10,14 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+button {
+  cursor: pointer;;
+}
+
+input[type=checkbox] {
+  cursor: pointer;
+}
+
 #main-wrapper {
   text-align: center;
   background-color: #ffffff;
@@ -25,7 +33,6 @@ input[type=number] {
   width: 100%;
   height: 90px;
   background-color: #503025;
-  border: 1px solid black;
   display: grid;
   grid-template-columns: 1fr 120px 1fr;
   align-items: center;
@@ -55,7 +62,7 @@ input[type=number] {
   text-shadow: 1px 0px 5px rgba(255, 255, 255, 0.521);
 }
 #header .left button:hover {
-  cursor: pointer;
+  
   text-shadow: 1px 0px 5px rgba(255, 255, 255, 0.521);
 }
 
@@ -76,12 +83,12 @@ input[type=number] {
 }
 
 #header .center .burger-logo {
-  cursor: pointer;
+  
   height: 50px;
 }
 
 #header .center .logo-text {
-  cursor: pointer;
+  
   font-size: 15px;
   margin-right: 19px;
   font-style: italic;
@@ -92,7 +99,6 @@ input[type=number] {
 #content {
   grid-row: 2/3;
   background-color: #ffffff;
-  border: 1px solid black;
 }
 
 #footer {
@@ -108,8 +114,6 @@ input[type=number] {
   grid-template-columns: repeat(auto-fill, 250px);
   grid-template-rows: repeat(auto-fill, 290px);
   gap: 15px;
-  
-  
 }
 
 #container-cards.blurred {
@@ -143,6 +147,7 @@ input[type=number] {
   width: 230px;
   font-size: 17px;
   margin-top: 10px;
+  font-weight: bold;
 }
 .item-card .price {
   font-size: 14px;
@@ -180,6 +185,7 @@ input[type=number] {
 
 .cart-items {
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .cart-item {
@@ -207,13 +213,13 @@ input[type=number] {
   width: 25px;
   height: 25px;
   margin-left: 7px;
-  cursor: pointer;
+  
 }
 
 .cart-item .icon-remove {
   width: 25px;
   height: 25px;
-  cursor: pointer;
+  
 }
 
 .cart-item .image {
@@ -279,7 +285,7 @@ input[type=number] {
 .cart-item .icon-x {
   width: 20px;
   height: 20px;
-  cursor: pointer;
+  
 }
 
 .cart-item .delete-item:hover {
@@ -295,10 +301,8 @@ input[type=number] {
   justify-content: center;
   align-self: center;
   grid-template-columns: 130px 100px;
-  border-top: 1px solid #000;
   margin-top: 10px;
-  padding-top: 10px;
-  height: 70px;
+  height: 40px;
   
 }
 
@@ -326,7 +330,7 @@ input[type=number] {
   width: 40px;
   height: 40px;
   padding: 2px;filter: invert(100%) sepia(98%) saturate(2%) hue-rotate(250deg) brightness(105%) contrast(101%);
-  cursor: pointer;
+  
 }
 
 #header .icon-cart:hover {
@@ -343,17 +347,20 @@ input[type=number] {
   font-size: 18px;
 }
 
-.container-home {
+#container-home {
   display: grid;
-  grid-template-rows: 730px 700px 400px;
+  grid-template-rows: 670px 670px 1fr;
+  width: 100vw;
+  height: 100%;
 }
 
-.container-home .presentation {
+#container-home .presentation {
   position: relative;
   display: flex;
+  width: 100%;
 }
 
-.container-home .presentation .text-background {
+#container-home .presentation .text-background {
   background-image: linear-gradient(0deg,
   rgba(0, 0, 0, 0.562),
   rgba(0, 0, 0, 0.562),
@@ -370,7 +377,7 @@ input[type=number] {
   flex-direction: column;
 }
 
-.container-home .presentation .text-background .button-store {
+#container-home .presentation .text-background .button-store {
   width: 150px;
   height: 40px;
   font-size: 18px;
@@ -381,14 +388,14 @@ input[type=number] {
   border-radius: 50px;
   margin-bottom: 20px;
   border-style: none;
-  cursor: pointer;
+  
 }
 
-.container-home .presentation .text-background .button-store:hover {
+#container-home .presentation .text-background .button-store:hover {
   text-shadow: 1px 0px 5px rgba(255, 255, 255, 0.521);
 }
 
-.container-home .presentation .text {
+#container-home .presentation .text {
   width: 300px;
   color: white;
   text-shadow: 1px 1px 1px black;
@@ -402,41 +409,43 @@ input[type=number] {
 
 
 
-.container-home .presentation .image {
+#container-home .presentation .image {
   position: absolute;
   top: -180px;
   width: 100%;
   height: calc(100% + 180px);
   background-size: cover;
-  background-position: top right;
+  background-position: top center;
 }
 
-.container-home .info-cards {
+#container-home .info-cards {
   background-color: rgb(255, 237, 203);
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 50px;
+  justify-content: center;
   box-shadow: 0 0 10px black;
   z-index: 1;
+  width: 100%;
+  overflow: auto;
 } 
 
-.container-home .info-cards .card {
+#container-home .info-cards .card {
   width: 250px;
   height: 300px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
+
 }
 
-.container-home .info-cards .card .image {
+#container-home .info-cards .card .image {
  width: 150px;
  height: 150px;
  margin-top: 20px;
  align-self: center;
 }
 
-.container-home .info-cards .card .text {
+#container-home .info-cards .card .text {
   margin-top: 20px;
   width: 200px;
   align-self: center;
@@ -444,17 +453,18 @@ input[type=number] {
   font-style: italic;
 }
 
-.container-home .opening-hours {
+#container-home .opening-hours {
   background-color: #faf3eb;
+  grid-row: 3/4;
 }
 
-.container-home .opening-hours .title {
+#container-home .opening-hours .title {
   margin-top: 20px;
   font-size: 20px;
   font-weight: bold;
 }
 
-.container-home .opening-hours .hours-table {
+#container-home .opening-hours .hours-table {
   display: grid;
   grid-template-rows: repeat(4, 30px);
   justify-content: center;
@@ -462,27 +472,28 @@ input[type=number] {
   align-items: center;
 }
 
-.container-home .opening-hours .hours-table .row {
+#container-home .opening-hours .hours-table .row {
   width: 200px;
   display: grid;
   grid-template-columns: 100px 100px;
   font-size: 18px;
 }
 
-.container-home .opening-hours .hours-table .days {
+#container-home .opening-hours .hours-table .days {
   grid-column: 1/2;
   text-align: left;
 }
-.container-home .opening-hours .hours-table .hours {
+#container-home .opening-hours .hours-table .hours {
   grid-column: 2/3;
 }
 
-.container-home .opening-hours .address {
+#container-home .opening-hours .address {
   margin-top: 50px;
 }
 
-.container-home .opening-hours .phone-number {
+#container-home .opening-hours .phone-number {
   margin-top: 20px;
+  margin-bottom: 50px;
 }
 
 #store-view {
@@ -493,6 +504,7 @@ input[type=number] {
 
 
 #sidebar-search {
+  box-sizing: border-box;
   display: grid;
   transition: 0.15s;
   width: 200px;
@@ -603,7 +615,7 @@ input[type=number] {
   align-self: center;
 }
 #sidebar-search .search-bar .input {
-  width: 160px;
+  width: 140px;
 }
 
 #sidebar-search .search-bar .icon_search {
@@ -623,48 +635,86 @@ input[type=number] {
 
 #edit-order {
   position: fixed;
-  width: 300px;
+  width: 280px;
   height: 500px;
-  margin-left: calc(-100vw + 40%);
-  margin-top: 30px;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  margin-top: 10vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  border: 1px solid #000;
+  box-shadow: 0 0 10px black;
   border-radius: 10px;
   background-color: white;
+  
+}
+
+#edit-order .item-image {
+  height: 170px;
+  width: 230px;
+  align-self: center;
+  margin-top: 10px;
 }
 
 #edit-order .options {
   display: flex;
   flex-direction: column;
   margin-top: 10px;
+  font-size: 17px;
+}
+
+#edit-order .options .option {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  cursor: pointer;
+}
+
+#edit-order .options input[type=checkbox] {
+  width: 20px;
+  height: 20px;
 }
 
 #edit-order .item-name {
   font-size: 18px;
+  margin-top: 10px;
   font-weight: bold;
-  margin: 0 10px;
 }
 
 #edit-order .container-count {
-  margin-top: 10px;
+  margin-top: auto;
   display: grid;
   grid-template-columns: 30px 60px 30px;
   height: 30px;
   align-self: center;
 }
 
+#edit-order .input-count {
+  width: 55px;
+  height: 30px;
+  font-size: 16px;
+  display: flex;
+  text-align: center;
+  align-self: center;
+}
+
 #edit-order .icon-add {
   width: 30px;
   height: 30px;
-  cursor: pointer;
+  margin-left: 5px;
+  
+  align-self: center;
 }
 
 #edit-order .icon-remove {
   width: 30px;
   height: 30px;
-  cursor: pointer;
+  margin-left: -5px;
+  
+  align-self: center;
 }
 
 #edit-order .total-price {
@@ -672,26 +722,66 @@ input[type=number] {
   display: flex;
   justify-content: center;
   gap: 10px;
+  font-size: 17px;
 }
 
 #edit-order .add-to-cart {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  width: 100px;
+  border-radius: 7px;
+  padding: 5px 10px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 120px;
+  font-size: 15px;
+  background-color: rgb(255, 200, 99);
   align-self: center;
 }
 
 #edit-order .close {
+  position: absolute;
   width: 30px;
   height: 30px;
-  position: absolute;
-  margin-top: -460px;
-  margin-left: 265px;
-  cursor: pointer;
-  border-radius: 10px;
+  margin-left: 245px;
+  margin-top: 5px;
+  
   filter: invert(47%) sepia(0%) saturate(18%) hue-rotate(192deg) brightness(91%) contrast(85%);
 }
 
 #edit-order .close:hover {
   filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.719)) invert(47%) sepia(0%) saturate(18%) hue-rotate(192deg) brightness(91%) contrast(85%);
+}
+
+@media only screen and (max-width: 680px) {
+  .item-card {
+    height: 250px;
+    width: 150px;
+  }
+  .item-card .image {
+    height: 150px;
+    width: 150px;
+  }
+  .item-card .title {
+    width: 150px;
+    font-size: 15px;
+  }
+
+  #container-cards {
+    grid-template-columns: repeat(auto-fill, 170px);
+    grid-template-rows: repeat(auto-fill, 270px);
+    gap: 5px;
+    margin: 50px auto 10px;
+  }
+
+  #container-home .info-cards {
+    justify-content: start;
+    scroll-snap-type: x mandatory;
+    overflow: auto;
+  }
+  #container-home .info-cards section{
+    scroll-snap-align: center;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+  }
+
 }
