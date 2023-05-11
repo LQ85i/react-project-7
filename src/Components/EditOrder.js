@@ -1,5 +1,4 @@
 import { useState } from "react";
-import icon_placeholder from "../Images/icon_placeholder.svg"
 import icon_x from "../Images/icon_x.svg"
 import ItemInputField from "./ItemInputField";
 import itemData from "./ItemData";
@@ -23,7 +22,7 @@ const EditOrder = (props) => {
 
     return (<div id="edit-order">
         <img className="close" src={icon_x} onClick={handleClick} alt="" />
-        <img className="item-image" src={icon_placeholder} alt="" />
+        <img className="item-image" src={itemData.getItem(editOrderItemID).img} alt="" />
         <div className="item-name">{itemData.getItem(editOrderItemID).title}</div>
         <div className="options">
             <label className="option">
@@ -39,9 +38,9 @@ const EditOrder = (props) => {
         <ItemInputField cart={cart} itemID={editOrderItemID} count={count} setCount={setCount} />
         <div className="total-price">
             <div className="text">Total: </div>
-            <div className="value">{itemData.getItem(editOrderItemID).price.toFixed(2) + " €"}</div>
+            <div className="value">{parseFloat((itemData.getItem(editOrderItemID).price) * count).toFixed(2) + " €"}</div>
         </div>
-        <button className="add-to-cart" onClick={handleClick}>add to cart</button>
+        <button className="add-to-cart" onClick={handleClick}>Add to cart</button>
     </div>);
 }
 

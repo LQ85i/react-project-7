@@ -22,8 +22,6 @@ const Header = (props) => {
         <div id="header">
             <div className="left">
                 <button className="store" onClick={handleClick}>Products</button>
-                <button className="contact" onClick={handleClick}>Contact</button>
-                <button className="about" onClick={handleClick}>About Us</button>
             </div>
             <div className="center" onClick={handleClick}>
                 <div>
