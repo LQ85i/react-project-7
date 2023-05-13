@@ -1,18 +1,29 @@
 {
   "files": {
-    "main.css": "/react-project-7/static/css/main.64f3ea8b.css",
-    "main.js": "/react-project-7/static/js/main.0dfd96bd.js",
+    "main.css": "/react-project-7/static/css/main.1e2ff978.css",
+    "main.js": "/react-project-7/static/js/main.67991424.js",
+    "static/media/pizza_stock.png": "/react-project-7/static/media/pizza_stock.bed788998487f5ebf811.png",
+    "static/media/kebab_stock.png": "/react-project-7/static/media/kebab_stock.f1f0775f5be2f0474cb2.png",
+    "static/media/soda_stock.png": "/react-project-7/static/media/soda_stock.2dcf85aa08aa6b8f39c8.png",
+    "static/media/smoothie_stock.jpg": "/react-project-7/static/media/smoothie_stock.eae59b9ed581fb0583e0.jpg",
+    "static/media/burger_stock.jpg": "/react-project-7/static/media/burger_stock.f42177d37e4f1224258e.jpg",
+    "static/media/coffee_stock.jpg": "/react-project-7/static/media/coffee_stock.4f4b898e09d19d0854db.jpg",
+    "static/media/icecream_stock.jpg": "/react-project-7/static/media/icecream_stock.d44b2dc171b9992470b3.jpg",
+    "static/media/burger_logo.png": "/react-project-7/static/media/burger_logo.7279b87eacad1169d5f2.png",
     "static/media/icon_shopping_cart.svg": "/react-project-7/static/media/icon_shopping_cart.ea0823e018d26ac6f618cd841e7e9ec8.svg",
     "index.html": "/react-project-7/index.html",
+    "static/media/icon_search.svg": "/react-project-7/static/media/icon_search.04a90d8779e84aa2122a12afb66dd3c9.svg",
     "static/media/icon_placeholder.svg": "/react-project-7/static/media/icon_placeholder.c6eb7057c6862cee0a07250c35ae119d.svg",
+    "static/media/icon_arrows_left.svg": "/react-project-7/static/media/icon_arrows_left.48ba5102143e2602bb4ed05725a98ffe.svg",
+    "static/media/icon_arrows_right.svg": "/react-project-7/static/media/icon_arrows_right.6825ce06a52222f351dabbe59dfaa628.svg",
     "static/media/icon_x.svg": "/react-project-7/static/media/icon_x.c76ad28c33323dfe86ec1e4bcf9c5b6c.svg",
     "static/media/icon_add.svg": "/react-project-7/static/media/icon_add.c8b39a336d92d4c5c69f8493a4ff6af5.svg",
     "static/media/icon_remove.svg": "/react-project-7/static/media/icon_remove.bf60699d5d18b452d77986227b0ffa5f.svg",
-    "main.64f3ea8b.css.map": "/react-project-7/static/css/main.64f3ea8b.css.map",
-    "main.0dfd96bd.js.map": "/react-project-7/static/js/main.0dfd96bd.js.map"
+    "main.1e2ff978.css.map": "/react-project-7/static/css/main.1e2ff978.css.map",
+    "main.67991424.js.map": "/react-project-7/static/js/main.67991424.js.map"
   },
   "entrypoints": [
-    "static/css/main.64f3ea8b.css",
-    "static/js/main.0dfd96bd.js"
+    "static/css/main.1e2ff978.css",
+    "static/js/main.67991424.js"
   ]
 }
