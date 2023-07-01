@@ -3,7 +3,7 @@
   grid-template-rows: 585px 750px 1fr;
   height: 100%;
   background-color: #FAF3EB;
-  font-family: 'PT Sans',Arial,serif;
+  font-family: 'PT Sans', Arial, serif;
   position: relative;
   z-index: 1;
 }
@@ -197,6 +197,14 @@
 
   #container-home {
     grid-template-rows: 1000px 750px 1fr;
+  }
+
+  #container-home .presentation .image-box {
+    z-index: 1;
+  }
+
+  #container-home .presentation .text-box {
+    z-index: 2;
   }
 
   #container-home .info-cards {
