@@ -1,3 +1,5 @@
+@import-normalize; /* bring in normalize.css styles */
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -11,7 +13,8 @@ input[type=number] {
 }
 
 button {
-  cursor: pointer;;
+  cursor: pointer;
+  ;
 }
 
 input[type=checkbox] {
@@ -79,7 +82,7 @@ input[type=checkbox] {
 }
 
 #header .center .burger-logo {
-  
+
   cursor: pointer;
   height: 50px;
 }
@@ -102,12 +105,12 @@ input[type=checkbox] {
 }
 
 #footer {
- grid-row: 3/4;
- background-color: #503025;
+  grid-row: 3/4;
+  background-color: #503025;
 }
 
 #container-cards {
-  width: min(1200px,100%);
+  width: min(1200px, 100%);
   margin: 100px auto 10px;
   display: grid;
   justify-content: center;
@@ -143,12 +146,14 @@ input[type=checkbox] {
   background-color: rgb(223, 223, 223);
   border-radius: 10px;
 }
+
 .item-card .title {
   width: 230px;
   font-size: 17px;
   margin-top: 10px;
   font-weight: bold;
 }
+
 .item-card .price {
   font-size: 14px;
 }
@@ -177,6 +182,7 @@ input[type=checkbox] {
   z-index: 2;
   overflow: scroll;
 }
+
 #sidebar-cart.hidden {
   visibility: hidden;
   margin-left: 100%;
@@ -214,14 +220,14 @@ input[type=checkbox] {
   height: 25px;
   margin-left: 7px;
   cursor: pointer;
-  
+
 }
 
 .cart-item .icon-remove {
   width: 25px;
   height: 25px;
   cursor: pointer;
-  
+
 }
 
 .cart-item .image {
@@ -303,7 +309,7 @@ input[type=checkbox] {
   grid-template-columns: 130px 100px;
   margin-top: 10px;
   height: 40px;
-  
+
 }
 
 .cart-total-title {
@@ -344,161 +350,9 @@ input[type=checkbox] {
   font-size: 18px;
 }
 
-#container-home {
-  display: grid;
-  grid-template-rows: 670px 670px 1fr;
-  width: 100vw;
-  height: 100%;
-}
-
-#container-home .presentation {
-  position: relative;
-  display: flex;
-  width: 100%;
-}
-
-#container-home .presentation .slide-background {
-  background-image: linear-gradient(0deg,
-  rgba(0, 0, 0, 0.562),
-  rgba(0, 0, 0, 0.562),
-  rgba(0, 0, 0, 0.562),
-  rgba(0, 0, 0, 0.562),
-  rgba(0, 0, 0, 0),
-  rgba(0, 0, 0, 0));
-  height: 300px;
-  width: 100%;
-  z-index: 1;
-  display: flex;
-  align-self: flex-end;
-  justify-content: flex-end;
-  flex-direction: column;
-}
-
-#container-home .presentation .slide-background .button-store {
-  width: 150px;
-  height: 40px;
-  font-size: 18px;
-  font-weight: bold;
-  align-self: center;
-  background-color: rgb(212, 42, 0);
-  color: white;
-  border-radius: 50px;
-  margin-bottom: 20px;
-  border-style: none;
-  
-}
-
-#container-home .presentation .slide-background .button-store:hover {
-  text-shadow: 1px 0px 5px rgba(255, 255, 255, 0.521);
-}
-
-#container-home .presentation .text {
-  width: 300px;
-  color: white;
-  text-shadow: 1px 1px 1px black;
-  align-self: center;
-  margin-bottom: 20px;
-  text-align: center;
-  font-style: italic;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-
-
-#container-home .presentation .image {
-  position: absolute;
-  top: -180px;
-  width: 100%;
-  height: calc(100% + 180px);
-  background-size: cover;
-  background-position: top center;
-}
-
-#container-home .info-cards {
-  background-color: rgb(255, 237, 203);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 10px black;
-  z-index: 1;
-  width: 100%;
-  overflow: auto;
-} 
-
-#container-home .info-cards .card {
-  width: 250px;
-  height: 300px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-
-}
-
-#container-home .info-cards .card .image {
- width: 150px;
- height: 150px;
- margin-top: 20px;
- align-self: center;
-}
-
-#container-home .info-cards .card .text {
-  margin-top: 20px;
-  width: 200px;
-  align-self: center;
-  font-size: 18px;
-  font-style: italic;
-}
-
-#container-home .info-cards .arrows {
-  display: none;
-}
-
-#container-home .opening-hours {
-  background-color: #faf3eb;
-  grid-row: 3/4;
-}
-
-#container-home .opening-hours .title {
-  margin-top: 20px;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-#container-home .opening-hours .hours-table {
-  display: grid;
-  grid-template-rows: repeat(4, 30px);
-  justify-content: center;
-  margin-top: 20px;
-  align-items: center;
-}
-
-#container-home .opening-hours .hours-table .row {
-  width: 200px;
-  display: grid;
-  grid-template-columns: 100px 100px;
-  font-size: 18px;
-}
-
-#container-home .opening-hours .hours-table .days {
-  grid-column: 1/2;
-  text-align: left;
-}
-#container-home .opening-hours .hours-table .hours {
-  grid-column: 2/3;
-}
-
-#container-home .opening-hours .address {
-  margin-top: 50px;
-}
-
-#container-home .opening-hours .phone-number {
-  margin-top: 20px;
-  margin-bottom: 50px;
-}
 
 #store-view {
-  display: flex;  
+  display: flex;
   background-color: #faf3eb;
 
 }
@@ -556,7 +410,8 @@ input[type=checkbox] {
   opacity: 1;
   transition: 0.20s;
   transition-delay: 0.15s;
-  filter: invert(47%) sepia(0%) saturate(18%) hue-rotate(192deg) brightness(91%) contrast(85%);}
+  filter: invert(47%) sepia(0%) saturate(18%) hue-rotate(192deg) brightness(91%) contrast(85%);
+}
 
 #store-view .expand-search.hidden {
   visibility: hidden;
@@ -612,7 +467,7 @@ input[type=checkbox] {
   margin-top: 10px;
 }
 
-#sidebar-search .filter .text { 
+#sidebar-search .filter .text {
   cursor: pointer;
 }
 
@@ -621,6 +476,7 @@ input[type=checkbox] {
   display: flex;
   align-self: center;
 }
+
 #sidebar-search .search-bar .input {
   width: 140px;
 }
@@ -641,17 +497,17 @@ input[type=checkbox] {
   position: fixed;
   width: 280px;
   height: 500px;
-  left: 0; 
-  right: 0; 
-  margin-left: auto; 
-  margin-right: auto; 
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 10vh;
   display: flex;
   flex-direction: column;
   box-shadow: 0 0 10px black;
   border-radius: 10px;
   background-color: white;
-  
+
 }
 
 #edit-order .item-image {
@@ -709,7 +565,7 @@ input[type=checkbox] {
   width: 30px;
   height: 30px;
   margin-left: 5px;
-  
+
   cursor: pointer;
   align-self: center;
 }
@@ -719,7 +575,7 @@ input[type=checkbox] {
   height: 30px;
   margin-left: -5px;
   cursor: pointer;
-  
+
   align-self: center;
 }
 
@@ -749,7 +605,7 @@ input[type=checkbox] {
   height: 30px;
   margin-left: 252px;
   margin-top: 0px;
-  
+
   cursor: pointer;
   filter: invert(19%) sepia(93%) saturate(7485%) hue-rotate(358deg) brightness(99%) contrast(114%);
 }
@@ -763,57 +619,20 @@ input[type=checkbox] {
     height: 250px;
     width: 150px;
   }
+
   .item-card .image {
     height: 150px;
     width: 150px;
   }
+
   .item-card .title {
     width: 150px;
     font-size: 15px;
   }
-
   #container-cards {
     grid-template-columns: repeat(auto-fill, 170px);
     grid-template-rows: repeat(auto-fill, 270px);
     gap: 5px;
     margin: 50px auto 10px;
-  }
-
-  #container-home .info-cards {
-    justify-content: start;
-    scroll-snap-type: x mandatory;
-    overflow: auto;
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    scrollbar-width: none;  /* Firefox */
-  }
-
-  #container-home .info-cards::-webkit-scrollbar {
-    display: none; /* Safari and Chrome */
-  }
-
-  #container-home .info-cards section {
-    scroll-snap-align: center;
-    min-width: 100vw;
-    display: flex;
-    justify-content: center;
-  }
-
-  #container-home .info-cards .arrows {
-    display: block;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  #container-home .info-cards .arrows .right {
-    width: 50px;
-    height: 50px;
-    transform: scale(1.5);
-  }
-  #container-home .info-cards .arrows .left {
-    width: 50px;
-    height: 50px;
-    transform: scale(1.5);
   }
 }
