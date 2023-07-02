@@ -1,0 +1,122 @@
+
+#edit-order {
+    position: fixed;
+    width: 280px;
+    height: 500px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px black;
+    border-radius: 10px;
+    background-color: white;
+  
+  }
+  
+  #edit-order .item-image {
+    height: 170px;
+    width: 230px;
+    align-self: center;
+    margin-top: 10px;
+  }
+  
+  #edit-order .options {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    font-size: 17px;
+  }
+  
+  #edit-order .options .option {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    cursor: pointer;
+  }
+  
+  #edit-order .options input[type=checkbox] {
+    width: 20px;
+    height: 20px;
+  }
+  
+  #edit-order .item-name {
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  #edit-order .container-count {
+    margin-top: auto;
+    display: grid;
+    grid-template-columns: 30px 60px 30px;
+    height: 30px;
+    align-self: center;
+  }
+  
+  #edit-order .input-count {
+    width: 55px;
+    height: 30px;
+    font-size: 16px;
+    display: flex;
+    text-align: center;
+    align-self: center;
+  }
+  
+  #edit-order .icon-add {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+  
+    cursor: pointer;
+    align-self: center;
+  }
+  
+  #edit-order .icon-remove {
+    width: 30px;
+    height: 30px;
+    margin-left: -5px;
+    cursor: pointer;
+  
+    align-self: center;
+  }
+  
+  #edit-order .total-price {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 17px;
+  }
+  
+  #edit-order .add-to-cart {
+    border-radius: 7px;
+    padding: 5px 10px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 120px;
+    font-size: 15px;
+    background-color: rgb(255, 200, 99);
+    align-self: center;
+  }
+  
+  #edit-order .close {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    margin-left: 252px;
+    margin-top: 0px;
+  
+    cursor: pointer;
+    filter: invert(19%) sepia(93%) saturate(7485%) hue-rotate(358deg) brightness(99%) contrast(114%);
+  }
+  
+  #edit-order .close:hover {
+    filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.719)) invert(19%) sepia(93%) saturate(7485%) hue-rotate(358deg) brightness(99%) contrast(114%);
+  }
+  

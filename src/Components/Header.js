@@ -1,5 +1,6 @@
 import shopping_cart from "../Images/icon_shopping_cart.svg"
 import burger_logo from "../Images/burger_logo.png";
+import '../Styles/Header.css';
 
 const Header = (props) => {
     const { navigate, cart, showCart, setShowCart } = props;
