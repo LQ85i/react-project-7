@@ -7,7 +7,7 @@ const Header = (props) => {
 
     const handleClick = (e) => {
         if (e.currentTarget.className === "store") {
-            navigate("/store");
+            navigate("/react-project-7/store");
         } else if (e.currentTarget.className === "icon-cart") {
             if(showCart === "hidden"){
                 setShowCart("")
