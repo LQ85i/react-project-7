@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/react-project-7/static/css/main.e9c1ceb8.css",
+    "main.css": "/react-project-7/static/css/main.2f835e1a.css",
     "main.js": "/react-project-7/static/js/main.93f8718f.js",
     "static/media/pizza_stock.png": "/react-project-7/static/media/pizza_stock.bed788998487f5ebf811.png",
     "static/media/kebab_stock.png": "/react-project-7/static/media/kebab_stock.f1f0775f5be2f0474cb2.png",
@@ -25,11 +25,11 @@
     "static/media/icon_arrow_left.svg": "/react-project-7/static/media/icon_arrow_left.3a58c5da8019cc78bea54c49f8b9b7cb.svg",
     "static/media/icon_arrow_right.svg": "/react-project-7/static/media/icon_arrow_right.c42bd81ee3bc7ccc9e3c470fac35f231.svg",
     "static/media/icon_remove.svg": "/react-project-7/static/media/icon_remove.bf60699d5d18b452d77986227b0ffa5f.svg",
-    "main.e9c1ceb8.css.map": "/react-project-7/static/css/main.e9c1ceb8.css.map",
+    "main.2f835e1a.css.map": "/react-project-7/static/css/main.2f835e1a.css.map",
     "main.93f8718f.js.map": "/react-project-7/static/js/main.93f8718f.js.map"
   },
   "entrypoints": [
-    "static/css/main.e9c1ceb8.css",
+    "static/css/main.2f835e1a.css",
     "static/js/main.93f8718f.js"
   ]
 }
