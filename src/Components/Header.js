@@ -16,7 +16,7 @@ const Header = (props) => {
             }
             
         } else if (e.currentTarget.className === "center") {
-            navigate("/");
+            navigate("/react-project-7");
         }
     }
     return (
