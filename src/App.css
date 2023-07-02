@@ -51,6 +51,10 @@ input[type=checkbox] {
   pointer-events: none;
 }
 
+#main-wrapper a, a.visited, a:hover, a:active {
+  color: black;
+}
+
 @media only screen and (max-width: 680px) {
   #container-cards {
     grid-template-columns: repeat(auto-fill, 170px);

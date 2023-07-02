@@ -1,5 +1,20 @@
-
 #footer {
     grid-row: 3/4;
     background-color: #503025;
-  }
+    display: flex;
+
+    font-size: 16px;
+    align-items: center;
+    font-weight: 500;
+}
+
+#footer .left {
+    float: left;
+    align-self: center;
+    margin-left: 10px;
+    color: rgb(192, 192, 192);
+}
+
+#footer a, a.visited, a:hover, a:active {
+    color: rgb(192, 192, 192);
+}
