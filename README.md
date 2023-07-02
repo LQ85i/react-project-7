@@ -2,6 +2,8 @@
 
 ## A website template for demoing a shopping cart
 
+Deployed live here: https://lq85i.github.io/react-project-7/
+
 Developed using HTML, CSS, JavaScript and React.
 
 Includes:
