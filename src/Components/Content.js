@@ -9,7 +9,7 @@ const Content = (props) => {
         <div id="content">
             <Routes>
                 <Route path='/react-project-7' element={<HomePage navigate={navigate} />}></Route>
-                <Route path='/store' element={<StorePage cart={cart} />} ></Route>
+                <Route path='/react-project-7/store' element={<StorePage cart={cart} />} ></Route>
             </Routes>
         </div>
     )
