@@ -2,6 +2,7 @@ import { useState } from "react";
 import icon_x from "../Images/icon_x.svg"
 import ItemInputField from "./ItemInputField";
 import itemData from "./ItemData";
+import '../Styles/EditOrder.css';
 
 const EditOrder = (props) => {
 

@@ -2,6 +2,7 @@ import React from "react";
 import SidebarCartItem from "./SidebarCartItem";
 import itemData from "./ItemData";
 import OutsideAlerterCart from "./ClickedOutsideCart";
+import '../Styles/SidebarCart.css'
 
 const SidebarCart = (props) => {
     const { cart, showCart, setShowCart } = props;

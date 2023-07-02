@@ -6,6 +6,7 @@ import icon_arrows_left from "../Images/icon_arrows_left.svg"
 import icon_search from "../Images/icon_search.svg"
 import EditOrder from "./EditOrder";
 import OutsideAlerterEditOrder from "./ClickedOutsideEditOrder";
+import '../Styles/StorePage.css';
 
 const StorePage = (props) => {
     const { cart } = props;

@@ -1,4 +1,5 @@
 import React from "react";
+import '../Styles/ItemCard.css';
 
 const ItemCard = (props) => {
     const { item, showEditOrder, setShowEditOrder, setEditOrderItemID } = props;
